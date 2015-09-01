@@ -6,7 +6,7 @@ app.Characters = Backbone.Collection.extend({
 
 });
 
-var sesameCharacters = [{
+app.sesameCharacters = [{
   "name": "Ernie",
   "clothing": "striped red and blue shirt",
   "photo": "http://www.sesameworkshop.org/press-kits/season41/images/monsterbook/ernie.jpg",
@@ -42,4 +42,4 @@ var sesameCharacters = [{
   "link": "elmo"
 }];
 
-app.characters = new app.Characters(sesameCharacters, {model: app.Character});
+app.characters = new app.Characters(app.sesameCharacters, {model: app.Character});

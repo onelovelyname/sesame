@@ -1,12 +1,6 @@
 var app = app || {};
 
-var Workspace = Backbone.Router.extend({
-
-  routes: {
-
-    "character/:name": "character"
-
-  },
+app.AppController = {
 
   character: function(name) {
 
@@ -14,11 +8,33 @@ var Workspace = Backbone.Router.extend({
 
     var selected = app.characters.where({link: name})[0];
 
-    new app.MoreInfoView({model: selected});
+    app.layoutView.getRegion('more-info').show(new app.MoreInfoView({model: selected}));
 
   }
 
+};
+
+
+app.Workspace = Marionette.AppRouter.extend({
+
+  controller: app.AppController,
+
+  appRoutes: {
+
+    "character/:name": "character"
+
+  },
+
 });
 
-app.TodoRouter = new Workspace();
-Backbone.history.start();
+
+$(document).ready(function() {
+  
+  app.layoutView = new app.AppView();
+  
+  app.layoutView.getRegion('characters').show(new app.CharactersView({collection: app.characters}));
+
+  app.Router = new app.Workspace();
+  Backbone.history.start();
+
+});

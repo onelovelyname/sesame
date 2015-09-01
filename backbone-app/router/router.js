@@ -1,6 +1,6 @@
 var app = app || {};
 
-var Workspace = Backbone.Router.extend({
+app.Workspace = Backbone.Router.extend({
 
   routes: {
 
@@ -20,5 +20,13 @@ var Workspace = Backbone.Router.extend({
 
 });
 
-app.TodoRouter = new Workspace();
-Backbone.history.start();
+$(document).ready(function() {
+  
+  new app.AppView();
+  
+  new app.CharactersView({collection: app.characters});
+
+  app.Router = new app.Workspace();
+  Backbone.history.start();
+
+});

@@ -1,19 +1,19 @@
-app.CharacterView = Backbone.View.extend({
+app.CharacterView = Marionette.ItemView.extend({
 
   tagName: 'tr',
 
   template: _.template('<td><%- name %></td><td><%- clothing %></td><td><a href ="#character/<%- link %>"><%- name %></a></td>'),
 
-  initialize: function() {
+  // initialize: function() {
 
-    this.listenTo(this.model, 'change', this.render);
+  //   this.listenTo(this.model, 'change', this.render);
 
-  },
+  // }
 
-  render: function() {
+  // render: function() {
 
-    return this.$el.html(this.template(this.model.attributes));
+  //   return this.$el.html(this.template(this.model.attributes));
 
-  }
+  // }
 
 });

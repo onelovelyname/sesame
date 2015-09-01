@@ -1,6 +1,6 @@
 var app = app || {};
 
-app.MoreInfoView = Backbone.View.extend({
+app.MoreInfoView = Marionette.ItemView.extend({
 
   tagName: 'ul',
 
@@ -8,16 +8,16 @@ app.MoreInfoView = Backbone.View.extend({
 
   template: _.template('<li><img src="<%- photo %>" alt=<%- name %>></li><li><%- bio %></li>'),
 
-  initialize: function() {
+  // initialize: function() {
 
-    this.render();
+  //   this.render();
 
-  },
+  // },
 
-  render: function() {
+  // render: function() {
 
-    this.$el.html(this.template(this.model.attributes)).appendTo($('.more-info-view'));
+  //   this.$el.html(this.template(this.model.attributes)).appendTo($('.more-info-view'));
   
-  }
+  // }
 
 });

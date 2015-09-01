@@ -17,6 +17,11 @@
   ],
   "dependencies": {
     "backbone": "~1.2.2",
-    "jquery": "~2.1.4"
+    "jquery": "~2.1.4",
+    "marionette": "~2.4.2",
+    "handlebars": "~4.0.0"
+  },
+  "resolutions": {
+    "backbone": "1.0.0 - 1.2.1"
   }
 }

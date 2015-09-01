@@ -1,12 +1,17 @@
 var app = app || {};
 
-app.AppView = Backbone.View.extend({
+app.AppView = Marionette.LayoutView.extend({
 
   tagName: 'div',
 
   className: 'app-view-ui',
 
-  template: _.template('<p>Sesame Street is an engaging tv show for children.</p><section class="characters"></section>'),
+  template: Handlebars.compile($('#layoutTemplate').html()),
+
+  regions: {
+    'characters': "#characters-region",
+    'more-info': "#more-info-region"
+  },
 
   initialize: function() {
     this.render();
