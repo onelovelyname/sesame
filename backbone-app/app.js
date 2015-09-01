@@ -13,7 +13,7 @@ var sesameCharacters = [{
 {
   "name": "Big Bird",
   "clothing": "birthday suit and feathers",
-  "link": "bigbird"
+  "link": "/bigbird"
 },
 {
   "name": "Oscar",
