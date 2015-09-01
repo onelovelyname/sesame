@@ -4,20 +4,17 @@ var Workspace = Backbone.Router.extend({
 
   routes: {
 
-    "home": "home",
     "character/:name": "character"
-
-  },
-
-  home: function() {
-
-    console.log("in home");
 
   },
 
   character: function(name) {
 
-    console.log("in character: ", name);
+    $('.more-info-view').html("");
+
+    var selected = app.characters.where({link: name})[0];
+
+    new app.MoreInfoView({model: selected});
 
   }
 

@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8">
     <title>Sesame Street</title>
+    <link rel="stylesheet" href="backbone-app/styles/main.css">
   </head>
   <body>
     
     <h1>Welcome to Sesame Streetz</h1>
+    <section class="app-view"></section>
+    <section class="more-info-view"></section>
     
     <!-- BOWER DEPENDENCIES -->
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
@@ -14,13 +17,14 @@
     <script src="bower_components/backbone/backbone-min.js"></script>
 
     <!-- APP FILES -->
-    <script src="backbone-app/router/router.js"></script>
     <script src="backbone-app/models/Character.js"></script>
     <script src="backbone-app/collections/Characters.js"></script>
     <script src="backbone-app/views/CharactersView.js"></script>
     <script src="backbone-app/views/CharacterView.js"></script>
+    <script src="backbone-app/views/MoreInfoView.js"></script>
     <script src="backbone-app/views/AppView.js"></script>
     <script src="backbone-app/app.js"></script>
+    <script src="backbone-app/router/router.js"></script>
 
   </body>
 </html>

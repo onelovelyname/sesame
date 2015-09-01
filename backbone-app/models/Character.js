@@ -4,7 +4,8 @@ app.Character = Backbone.Model.extend({
 
   defaults: {
     name: 'Ernie',
-    clothing: 't-shirt'
+    clothing: 't-shirt',
+    link: 'default'
   }
-  
+
 });
