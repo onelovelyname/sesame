@@ -1,0 +1,22 @@
+{
+  "name": "Sesame",
+  "version": "0.0.1",
+  "homepage": "https://github.com/onelovelyname/sesame",
+  "authors": [
+    "Melanie Gin <melaniegin1@gmail.com>"
+  ],
+  "description": "Sesame is designed to teach differences between front-end Javascript frameworks, including Backbone.js, Marionette.js, and React.js.",
+  "main": "index.html",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "backbone": "~1.2.2",
+    "jquery": "~2.1.4"
+  }
+}
