@@ -15,26 +15,21 @@ app.AppController = {
 };
 
 
-app.Workspace = Marionette.AppRouter.extend({
-
-  controller: app.AppController,
-
-  appRoutes: {
-
-    "character/:name": "character"
-
-  },
-
-});
-
-
 $(document).ready(function() {
   
   app.layoutView = new app.AppView();
   
   app.layoutView.getRegion('characters').show(new app.CharactersView({collection: app.characters}));
 
-  app.Router = new app.Workspace();
+  app.Router = new Marionette.AppRouter({
+
+    controller: app.AppController,
+    appRoutes: {
+      "character/:name": "character"
+    }
+
+  });
+  
   Backbone.history.start();
 
 });
